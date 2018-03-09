@@ -9,6 +9,7 @@ urlj = json.load(url)
 
 if urlj['media_type'] == 'image':	#to check if the element is picture only
 	urllib.urlretrieve(urlj['hdurl'],'/home/raghuttam/apod_img.jpg')
+	print(urlj['title'])
 else:
 	print("The image is unavailable today as the server has uploaded a "+urlj['media_type'])
 
